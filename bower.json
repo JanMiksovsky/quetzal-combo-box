@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "quetzal-button": "JanMiksovsky/quetzal-button#master",
+    "quetzal-toggle-button": "JanMiksovsky/quetzal-toggle-button#master",
     "quetzal-popup-source": "JanMiksovsky/quetzal-popup-source#master"
   },
   "ignore": [

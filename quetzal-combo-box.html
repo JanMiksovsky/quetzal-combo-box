@@ -3,8 +3,8 @@ A text input area with a popup, which typically presents a dropdown list of
 choices, but could just as easily provide choices in other ways.
 -->
 
-<link rel="import" href="../components/quetzal-popup-source/quetzal-popup-source.html">
-<link rel="import" href="../components/quetzal-button/quetzal-button.html">
+<link rel="import" href="../quetzal-popup-source/quetzal-popup-source.html">
+<link rel="import" href="../quetzal-toggle-button/quetzal-toggle-button.html">
 
 <polymer-element name="quetzal-combo-box" extends="quetzal-popup-source" attributes="closeOnEnter value">
 
@@ -36,11 +36,11 @@ choices, but could just as easily provide choices in other ways.
 }
 
 /* TODO: Generic appearance */
-:host([generic]:host) #comboContainer {
+:host([generic]:host) ^ #comboContainer {
   border: 1px solid lightgray;
 }
 
-:host([generic]:host) #dropdownButton::part(x-button) {
+:host([generic]:host) ^ #dropdownButton ^ #button {
   border: none !important;
   border-left: 1px solid transparent !important;
   border-radius: 0 !important;
@@ -53,7 +53,7 @@ BUG: This hover styling doesn't work. This may be related to general rendering
 problems in shadows:
 https://code.google.com/p/chromium/issues/detail?id=317895&can=4&colspec=ID%20Pri%20M%20Iteration%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified
 */
-:host([generic]:host) #comboContainer:hover #dropdownButton::part(x-button) {
+:host([generic]:host) ^ #comboContainer:hover #dropdownButton ^ #button) {
   border-left-color: lightgray !important;
 }
 
